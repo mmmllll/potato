@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>如何下载 Potato Chat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1 user-scalable=0">
+<meta name="description" content="Potato is an instant messaging tool focused on security. It is faster, safer, more open and completely free. Potato can create a large group of 200,000 members, and with no limit on the size of files. It provides you with an all-dimensional privacy settings as well as safest and the most stable chatting environment. Besides, Potato is also an expert in the protection of your digital currency.">
+<meta name="keywords" content="potato, potato.im, chat messenger, chat tool, instant message, secure chats, private chats, voice, voice call, Moments, Album, send pictures, super group, channel, wallet, digital wallet, AI, Bot, Bot API, opening platform.">
+<style>
+:root {
+	--vt-c-white: #ffffff;
+	--vt-c-white-soft: #f7f7f7;
+	--vt-c-white-mute: #f2f2f2;
+	--vt-c-black: #010101;
+	--vt-c-black-soft: rgb(28, 28, 30);
+	--vt-c-black-mute: #282828;
+
+	--vt-font-size: 16px;
+	--vt-font-size-small: 14px;
+	--vt-font-size-large: 18px;
+	--vt-font-size-head: 30px;
+
+	--vt-color-primary: #4B80EB;
+	--vt-color-primary-mute: rgba(60, 101, 239, 0.8);
+	--vt-color-warn: #FF3B30;
+}
+
+:root {
+	--color-background: var(--vt-c-white);
+	--color-background-soft: var(--vt-c-white-soft);
+	--color-background-mute: var(--vt-c-white-mute);
+
+	--color-text: var(--vt-c-black-soft);
+	--color-text-active: var(--vt-c-white-soft);
+
+	--font-size: var(--vt-font-size);
+	--font-size-small: var(--vt-font-size-small);
+	--font-size-large: var(--vt-font-size-large);
+	--font-size-head: var(--vt-font-size-head);
+
+	--color-primary: var(--vt-color-primary);
+	--color-primary-mute: var(--vt-color-primary-mute);
+	--color-warn: var(--vt-color-warn);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+}
+body {
+	padding-top: env(safe-area-inset-top, 50px);
+	padding-bottom: env(safe-area-inset-bottom, 20px);
+	padding-left: env(safe-area-inset-left, 0px);
+	padding-right: env(safe-area-inset-right, 0px);
+	font-family: PingFangSC-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none !important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+	/* background-color:rgb(59,101,239); */
+	background: var(--color-background);
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+header {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: none;
+}
+
+.content{
+margin: 0 auto;
+max-width: 768px;
+padding: 0 1em;
+font-size: var(--font-size);
+}
+
+.content h1{
+	font-size: var(--font-size-head);
+	color: var(--color-text-active);
+}
+@media only screen and (max-width: 424px) {
+	.content h1{
+		font-size: var(--font-size-large);
+	}
+}
+.content h2{
+display: inline-block;
+font-size: var(--font-size-large);
+}
+
+.content>.method{
+margin: 1em 0;
+padding: 2em 1.5em 1em 1.5em;
+text-align: left;
+color: var(--color-text);
+border-radius: 12px;
+background-color: var(--color-background);
+box-shadow: 0px 3px 8px 3px #0001;
+}
+.content>.method .mhead h2{
+	font-weight: 700;
+	font-size: var(--font-size-large);
+}
+
+.content>.method p{
+	margin: 1em 0;
+	overflow-wrap: anywhere;
+	/* word-break: break-all; */
+	font-size: var(--font-size-small);
+}
+.content>.method>p{
+	margin: 1.5em 0;
+}
+
+.content>.method p .seq{
+	color: #4B80EB;
+	font-weight: 600;
+	font-size: var(--font-size-head);
+	margin-right: 0.3em;
+}
+
+.content>.method .dm{
+	color: var(--color-primary);
+}
+
+.content .warn{
+	color: var(--color-warn);
+}
+
+footer{
+	min-height: 50px;
+}
+
+.bgu,.bgd{
+	background-color: var(--color-primary);
+	position:absolute;
+	left: 0;
+	width: 100vw;
+	height: 180px;
+	z-index: -1;
+}
+.bgu{
+	top: 0;
+	-webkit-clip-path: circle(farthest-side at 50% calc(-2 * 100vw));
+	clip-path: circle(farthest-side at 50% calc(-2 * 100vw));
+}
+.bgd{
+	bottom: 0;
+}
+
+.pic img{
+	max-width: 100%;
+	max-height: 400px;
+	display: block;
+	margin: 0 auto;
+}
+
+.data {
+	overflow-x: auto;
+}
+.data table{
+	margin: 0 auto;
+}
+.data table tr td:nth-child(1){
+	min-width: 200px;
+}
+
+</style>
+<input type="hidden" id="_o_dbjbempljhcmhlfpfacalomonjpalpko" data-inspect-config="3"><script type="text/javascript" src="html1_files/inspector.js"></script></head>
+<body>
+<div class="bgu">
+</div>
+<header>
+	<div class="content">
+		<h1>iOS 如何下载Potato Chat</h1>
+	</div>
+</header>
+<main>
+	<section>
+		<div class="content">
+			<div class="method">
+				<div class="mhead">
+					<h2>方案1： 用提供的 Apple ID 下载</h2>
+					<p>操作教程：请在App Store内登陆，<span class="warn">禁止手机设置中登陆！禁止手机设置中登陆！禁止手机设置中登陆！</span></p>
+				</div>
+				<p><span class="seq">01</span>打开App Store，点击右上角<span class="dm">[头像]</span>，滑到最下面，然后点击<span class="dm">[退出登入]</span>;</p>
+				<div class="pic"><img src="html1_files/ios_11.png" alt=""></div>
+				<p><span class="seq">02</span>填入以下任意Apple ID，然后点击<span class="dm">[登陆]</span>;</p>
+				<div class="pic"><img src="html1_files/ios_12.png" alt=""></div>
+				<p><span class="seq">03</span>选<span class="dm">[其他]</span>选项，然后点击<span class="dm">[不升级]</span>;</p>
+				<div class="pic"><img src="html1_files/ios_13.png" alt=""></div>
+				<p><span class="seq">04</span>点击<span class="dm">[OK]</span>;</p>
+				<p><span class="seq">05</span>点击导航栏搜索，输入Potato 进行搜索下载</p>
+				<div class="pic"><img src="html1_files/ios_15.png" alt=""></div>
+				<p class="warn">特别注意：选择其中一个ID登陆，输入ID账号、密码点击<span class="dm">[登录]</span>后，不要点击<span class="dm">[继续]</span>，一定要选择<span class="dm">其他选项</span>就直接登录了。否则会提示需要双重验证，切记，切记，切记。</p>
+				<div class="data">
+					<table>
+						<tbody><tr><td>Y255941@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>G879948@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>N067932@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>S890660@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>H341398@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>P182514@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>S125178@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>R234417@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>U842126@MailTemp.top</td><td>Am112211</td></tr>
+						<tr><td>Z086010@MailTemp.top</td><td>Am112211</td></tr>
+					</tbody></table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="content">
+			<div class="method">
+				<div class="mhead">
+					<h2>方案2： 注册属于您自己的香港Apple ID 下载</h2>
+					<p></p>
+				</div>
+				<p><span class="seq">01</span>打开苹果官网 https://appleid.apple.com ，注册一个中国大陆的Apple ID.</p>
+				<div class="pic"><img src="html1_files/ios_21.png" alt=""></div>
+				<p><span class="seq">02</span>用注册的Apple ID登录 https://appleid.apple.com ，然后进入账号管理中心，点击“个人信息”，选择国家和地区，修改成 “香港”。</p>
+				<div class="pic"><img src="html1_files/ios_22.png" alt=""></div>
+				<p><span class="seq">03</span>付款方式选择“无”，账单寄送地址任意填写，填写完成之后，点击“更新”。</p>
+				<div class="pic"><img src="html1_files/ios_23.png" alt=""></div>
+				<p><span class="seq">04</span>国家或地区成功变成“香港”，证明这个账号已经是香港Apple ID了。</p>
+				<div class="pic"><img src="html1_files/ios_24.png" alt=""></div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+	<div class="content"></div>
+</footer>
+<div class="bgd"></div>
+<script>
+!function (G, D) {
+function selectDomText(node) {
+	if ("function" === typeof window.getSelection) {
+		var selection = window.getSelection();
+		var range = document.createRange();
+		range.selectNodeContents(node);
+		selection.removeAllRanges();
+		selection.addRange(range);
+	} else if ("function" === typeof document.body.createTextRange) {
+		var range = document.body.createTextRange();
+		range.moveToElementText(node);
+		range.select();
+	} else {
+		console.warn("Could not select text in node: Unsupported browser.");
+	}
+}
+function setupClick() {
+	var nodes = document.querySelectorAll(".data table tr td");
+	if (!nodes) { return; }
+	nodes.forEach(function (n) {
+		n.addEventListener("click", function(ev) {
+			selectDomText(n);
+		});
+	});
+}
+function onload() {
+	try {
+		D.addEventListener('touchstart', function () { }, { passive: true });
+		setupClick();
+	} catch (e) {
+		console.log(e);
+	}
+}
+window.addEventListener("DOMContentLoaded", onload);
+}(window, document);
+</script>
+
+
+</body></html>
